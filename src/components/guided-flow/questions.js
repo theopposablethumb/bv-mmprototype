@@ -2,7 +2,7 @@ import React from 'react';
 import Listing from './Listing';
 
 const health = [{title:'Memory and Mood', name: 'memory'}, {title: 'Medication', name: 'medication'}, {title: 'Mobility', name: 'mobility'}, {title: 'Hearing', name: 'hearing'}, {title: 'Vision', name: 'vision'}];
-const leisure = [{title: 'Gardening and outdoors', name: 'gardening'}, {title: 'Exercise and fitness', name: 'exercise'}, {title: 'Hobbies and leisure', name: 'hobbies'}, {title: 'Caring for pers', name: 'pets'}, {title: 'Listening to music, radio, or audio books', name: 'listening'}];
+const leisure = [{title: 'Gardening and outdoors', name: 'gardening'}, {title: 'Exercise and fitness', name: 'exercise'}, {title: 'Hobbies and leisure', name: 'hobbies'}, {title: 'Caring for pets', name: 'pets'}, {title: 'Listening to music, radio, or audio books', name: 'listening'}];
 const home = [{title: 'House hold chores and hygiene', name: 'chores'}, {title: 'DIY and maintenance', name: 'DIY'}, {title: 'Stairs', name: 'stairs'}, {title: 'Cooking and meals', name: 'cooking'}];
 const security = [{title: 'Help in emergencies', name: 'emergencies'}, {title: 'Living alone', name: 'alone'}, {title: 'Living alone', name: 'alone'}, {title: 'In the kitchen', name: 'kitchen'}, {title: 'In the bathroom', name: 'bathroom'}];
 
