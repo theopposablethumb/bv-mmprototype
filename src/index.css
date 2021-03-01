@@ -6,11 +6,15 @@ header {background: #185D6F; color: #fff; text-align: center; padding: 1em;}
 h1 {font-size: 3em; font-weight: 400;}
 h2 {font-size: 2.5em; font-weight: 400; text-align: center; line-height: 1.5em;}
 p {margin: 1.5em 0 0;}
+.centered {text-align: center;}
 
 main {width: 80vw; margin: 0 auto;}
 
 .left {float: left}
 .right {float: right}
+
+form.location {position: relative;}
+.autocompleteLocations { position: absolute; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 10; top: 100%; left: 0; right: 0; }
 
 .questions {width: 30vw; margin: 0 auto;}
 .questions.week {width: 100%;}
@@ -24,6 +28,16 @@ img {border-radius: 4px; box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);}
 ul button {box-sizing: border-box; padding: 1em; margin: 0.75em 0; border: 1px solid #ddd; background: #eee; width: 100%; text-align: center;}
 ul button:hover, ul button.selected {box-sizing: border-box; border: 2px solid #285C74; background: #E4E7ED;}
 
+input {border-radius: 4px; font-size: 1.1em; width: 100%; padding: 0.75em 1em; margin: 0.5em 0 0 0; background: #f5f5f5; border: 1px solid #E4E4E4; box-sizing: border-box; }
+input::placeholder {color: #888888;}
+input:focus {border: 2px solid #185D6F; outline: none;}
+
+ul.options {background: #f5f5f5; border: 1px solid #E4E4E4; margin: 0; width: 100%; box-sizing: border-box}
+ul.options li {padding: 0.75em 1em;}
+ul.options li.active {background: #d3f2f1; border: 1px solid #9daeb0;}
+ul.options li:hover {background: #d3edf2;}
+
+.week ul {list-style-type: none;}
 .week ul button {padding: 1.5em 0.75em;}
 .week ul li {margin: 0 1em; width: 10%;}
 
