@@ -21,7 +21,6 @@ class LocationSearch extends React.Component {
     };
 
     selectLocation = (e) => {
-        console.log(e.currentTarget.innerText);
         this.props.getLocation(e.currentTarget.innerText);
         this.setState({
             activeOption: 0,
@@ -38,7 +37,6 @@ class LocationSearch extends React.Component {
         let activeOption = this.state.activeOption;
 
         if (showOptions && userInput) {
-            console.log(filteredOptions);
             if (filteredOptions.length) {
                 return (
                     <ul className="options">

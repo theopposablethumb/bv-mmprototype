@@ -1,5 +1,4 @@
 import React from 'react';
-import Listing from './Listing';
 import LocationSearch from '../LocationSearch';
 import Options from './Options';
 import Days from './Days';
@@ -134,7 +133,6 @@ class Questions extends React.Component {
             return(
                 <>
                     <Listings answers={this.state.answers} days={this.state.days} location={this.state.location} />
-                    <Listing answers={this.state.answers} days={this.state.days} location={this.state.location} />
                     <button className="reset" onClick={() => {this.reset()}}>Start again</button>
                 </>
             )

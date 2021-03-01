@@ -1,54 +1,51 @@
 import React from 'react';
 
 class Listing extends React.Component {
-    state = {support: false};
-    
-    supportRequired() {
-        console.log(this.props.answers[2]);
-        if (this.props.answers[2] === 'Yes') {
-            this.setState(state => ({support: true}))
+
+    allReviews = () => {
+        let reviews = this.props.reviews;
+        if (this.props.isFull) {
+            return reviews.map(review => <li><p>{review.review}</p><p><span>{review.author}</span></p></li>);
+        } else {
+            return <li>{this.props.reviews[0].review} <span>{this.props.reviews[0].author}</span></li>;
         }
     }
 
-    renderSupport() {
-        if (this.state.support === true) {
-            return (
-                <>
-                    <p><strong>Support is required on</strong></p>
-                    <ul className="days">
-                        {this.props.days.map(day => <li>{day.slice(0, 2)}</li>)}
-                    </ul>
-                </>
-            )
+    heading = () => {
+        if (this.props.isFull) {
+            return <h2>{this.props.title}</h2>;
+        } else {
+            return <h2 onClick={() => {this.props.viewListing(this.props.index)}} >{this.props.title}</h2>;
         }
     }
 
-    componentDidMount() {
-        this.supportRequired();
+    back = () => {
+        if (this.props.isFull) {
+            return <button className="reset" onClick={() => {this.props.resetListing()}}>Back to all listings</button>;
+        } else {
+            return null;
+        }
     }
 
     render() {
+        let rating = new Array(this.props.rating).fill('1');
         console.log(this.props);
-        console.log(this.state);
         return (
+            <>
+            {this.back()}
             <div className="listing">
-                <img src="./imgs/bvmm.jpg" width="200" height="200" alt="two dudes standing in a garden and drinking tea" />
+                <div className="image">
+                    <img src={this.props.img} alt={this.props.title} />
+                </div>
                 <div>
-                    <h2>BelleVie {this.props.answers[0]} package</h2>
-                    <div className="left">
-                        <p><strong>I would like help with...</strong></p>
-                        <ul>
-                            <li>{this.props.answers[0]}</li>
-                            <li>{this.props.answers[1]}</li>
-                        </ul>
-                        {this.renderSupport()}
-                    </div>
-                    <div className="right">
-                        <p className="price">Price £150 <span>per week</span></p>
-                        <p className="call"><a href="tel: 012535 355 570">Call us: 012535 355 570</a></p>
-                    </div>
+                    {this.heading()}
+                    <ul className="rating">{rating.map(score => <li><span>{score}</span></li>)}</ul>
+                    <p>{this.props.description}</p>
+                    <ul className="reviews">{this.allReviews()}</ul>
+                    <p>£{this.props.price}</p>
                 </div>
             </div>
+            </>
         )
     }
 }
