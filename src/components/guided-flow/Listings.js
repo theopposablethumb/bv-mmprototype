@@ -26,6 +26,7 @@ class Listings extends React.Component {
         return (
             <>
                 <h2>Available services in {this.props.location}</h2>
+                <p>Change your selection</p>
                 <ul className="selected">
                     {this.props.answers.map(answer => <li key={answer}>{answer}</li>)}
                 </ul>
