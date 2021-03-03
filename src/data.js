@@ -16,3 +16,186 @@ export const products = [
 export const services = [{}];
 
 export const initValues = [{title: 'Health and Wellbeing', name: 'health'}, {title: 'Leisure and Play', name: 'leisure'}, {title: 'Living at Home', name: 'home'}, {title: 'Security', name: 'security'}];
+
+export const carers = [
+    {
+        name: 'Lisa',
+        team: 'Abingdon',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/237306F6-CBEB-43D6-9BAA-E3F096FF06BD-rotated.jpeg',
+    },
+    {
+        name: 'Lucy',
+        team: 'Abingdon',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/8C6AC106-D7CE-427A-847E-D387036AE87D.jpeg',
+    },
+    {
+        name: 'Mark',
+        team: 'Abingdon',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/20180818_175329-1.jpg',
+    },
+    {
+        name: 'Jean',
+        team: 'Abingdon',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/20210202_150331.jpg',
+    },
+    {
+        name: 'Chevonne',
+        team: 'Henley',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/03/Chevonne.jpg',
+    },
+    {
+        name: 'Charley',
+        team: 'Henley',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/3F236232-6008-4634-B5D0-E0A3082DB1CD.jpeg',
+    },
+    {
+        name: 'Christine',
+        team: 'Henley',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/profile-pic.jpg',
+    },
+    {
+        name: 'Emma',
+        team: 'Henley',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/emma-1-e1603211658884.jpg',
+    },
+    {
+        name: 'Fiona',
+        team: 'Oxford',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20201110_124943136-2.jpg'
+    },
+    {
+        name: 'Lauren',
+        team: 'Oxford',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Photo_Lauren.png'
+    },
+    {
+        name: 'Greta',
+        team: 'Oxford',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Screenshot-2021-01-17-at-16.10.19.png'
+    },
+    {
+        name: 'Parveen',
+        team: 'Oxford',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20191119_001858_431.jpg'
+    },
+    {
+        name: 'Caroline',
+        team: 'Wantage',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Bellevie-ID.jpg'
+    },
+    {
+        name: 'Billy',
+        team: 'Wantage',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Billy-Picture-rotated.jpg'
+    },
+    {
+        name: 'Amelia',
+        team: 'Wantage',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Untitled.jpg'
+    },
+    {
+        name: 'Alice',
+        team: 'Wantage',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Alice.jpg'
+    },
+    {
+        name: 'Peter',
+        team: 'Witney',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/P1150609-1.jpg'
+    },
+    {
+        name: 'Kelly',
+        team: 'Witney',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/E693E814-AB89-47BC-AE1C-F0FA7A125B20.jpg'
+    },
+    {
+        name: 'Julie',
+        team: 'Witney',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/ID-image-JK.jpg'
+    },
+    {
+        name: 'Angie',
+        team: 'Witney',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_0483-rotated.jpg'
+    },
+    {
+        name: 'Karen',
+        team: 'Woodstock',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_1180.jpg'
+    },
+    {
+        name: 'Imogen',
+        team: 'Woodstock',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Imogen.jpeg'
+    },
+    {
+        name: 'Vicki',
+        team: 'Woodstock',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Vicki.jpg'
+    },
+    {
+        name: 'Tina',
+        team: 'Woodstock',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tina.jpg'
+    },
+    {
+        name: 'Neil',
+        team: 'County Durham',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/01/neil.jpg'
+    },
+    {
+        name: 'Lisa',
+        team: 'County Durham',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/image0-2.png'
+    },
+    {
+        name: 'Glen',
+        team: 'County Durham',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/BelleVie-photo-2-scaled.jpg'
+    },
+    {
+        name: 'Sara',
+        team: 'County Durham',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Sara.jpg'
+    },
+    {
+        name: 'Tesni',
+        team: 'Newcastle upon Tyne',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tesni.jpg'
+    },
+    {
+        name: 'Camilla',
+        team: 'Newcastle upon Tyne',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Camilla.jpg'
+    },
+    {
+        name: 'Grace',
+        team: 'Newcastle upon Tyne',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Grace.jpg'
+    },
+    {
+        name: 'Marc',
+        team: 'Newcastle upon Tyne',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Marc.jpg'
+    },
+    {
+        name: 'Lora',
+        team: 'Northumberland',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Lora.png'
+    },
+    {
+        name: 'Karina',
+        team: 'Northumberland',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/karina-scaled.jpg'
+    },
+    {
+        name: 'Mauricio',
+        team: 'Northumberland',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/mauricio-1-e1602339778439.jpg'
+    },
+    {
+        name: 'Beth',
+        team: 'Northumberland',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/beth.jpg'
+    },
+]

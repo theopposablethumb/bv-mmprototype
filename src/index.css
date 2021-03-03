@@ -10,6 +10,8 @@ h4 {font-size: 1.25em; font-weight: 400; line-height: 1.5em; margin: 1.5em 0 0 0
 p {margin: 1.5em 0 0;}
 .centered {text-align: center;}
 
+
+
 main {width: 80vw; margin: 0 auto;}
 
 .left {float: left}
@@ -25,6 +27,9 @@ form.location {position: relative;}
 button {font-size: 1em; font-family: 'Roboto'; border-radius: 4px;}
 
 img {border-radius: 4px; box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);}
+figure {margin: 0; padding: 0; border-radius: 4px; background: #fff; box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);}
+figure img {box-shadow: none;}
+figcaption {font-size: 1em; font-weight: 500; padding: 0.5em 0.75em;}
 
 .questions ul {list-style: none; padding: 0;}
 ul button {box-sizing: border-box; padding: 1em; margin: 0.75em 0; border: 1px solid #ddd; background: #eee; width: 100%; text-align: center;}
@@ -43,7 +48,7 @@ ul.options li:hover {background: #d3edf2;}
 .week ul button {padding: 1.5em 0.75em;}
 .week ul li {margin: 0 1em; width: 10%;}
 
-ul.days, ul.selected, ul.rating {list-style-type: none; margin: 0; padding: 0;}
+ul.days, ul.selected, ul.rating, ul.carers {list-style-type: none; margin: 0; padding: 0;}
 ul.selected {margin-top: 1em;}
 ul.days li, ul.selected li {display: inline-block; padding: 0.5em 0.75em; margin: 0 0.25em; background: #fff; border: 1px solid #ddd;}
 ul.selected li:first-child {margin-left: 0;}
@@ -54,11 +59,11 @@ button.next {padding: 0.5em 1.25em; background: #185D6F; color: #fff; font-weigh
 button.next:hover {background: #489982; border: 3px solid #489982;}
 
 .listing {background: #eee; border: 1px solid #999; border-radius: 4px; padding: 1em; margin: 3em; display: flex;}
-.listing h2 {text-align: left; font-size: 2em; color: #185D6F; margin: 0 0 0.25em;}
+.listing h2 {text-align: left; text-decoration: underline; font-size: 2em; color: #185D6F; margin: 0 0 0.25em;}
+.listing h2:hover {text-decoration: none; color: #489982;}
 .listing div {box-sizing: border-box; padding: 0 2em; flex-grow: 2;}
 .listing ul {margin-top: 0.25em;}
-.price, .call {text-align: right;}
-.price {font-size: 1.5em; font-weight: 500; color: #8B7D3A; padding-right: 0.2em;}
+.price {font-size: 1.5em; font-weight: 500; color: #8B7D3A; margin: 0.25em 0;}
 .price span {font-size: 0.85em;}
 .call a {padding: 1em 1.5em; margin-top: 0.75em; background: #FFC247; border-radius: 8px; color: #333; text-decoration: none; font-weight: 700; display: inline-block;}
 
@@ -76,7 +81,12 @@ div.bvApproved {padding: 0;}
 .bvApproved img {box-shadow: none; float: left; margin-right: 0.5em;}
 .bvApproved p {font-size: 1.4em; font-weight: 500; color: #185D6F; padding: 0.8em;}
 
-.cta {width: 50%; box-sizing: border-box; border-radius: 8px; background: #e6f1f2;}
+div.cta {width: 50%; padding-bottom: 1em; box-sizing: border-box; border-radius: 8px; background: #e6f1f2;}
+
+ul.carers {margin-top: 1.5em;}
+.carers li {margin: 0 1.5em;}
+.carers li:first-child {margin: 0;}
+.carers img {width: 150px; height: 150px;}
 
 ul.reviews {list-style: none; padding: 0;}
 .reviews li {display: flex; margin: 2em 0}

@@ -18,7 +18,7 @@ class Listings extends React.Component {
             return products.map((product, index) => <Listing key={index} index={index} title={product.title} description={product.description} img={product.image} price={product.price} rating={product.rating} reviews={product.reviews} listing={this.state.listing} viewListing={this.setListing} />)
         } else {
             let i = this.state.listing;
-            return <Listing title={products[i].title} description={products[i].description} img={products[i].image} price={products[i].price} rating={products[i].rating} reviews={products[i].reviews} isFull={true} resetListing={this.resetListing} />;
+            return <Listing title={products[i].title} description={products[i].description} img={products[i].image} price={products[i].price} rating={products[i].rating} reviews={products[i].reviews} support={this.props.support} location={this.props.location} days={this.props.days} isFull={true} resetListing={this.resetListing} />;
         }
     }
 

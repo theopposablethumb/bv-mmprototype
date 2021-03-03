@@ -15,7 +15,8 @@ class Questions extends React.Component {
         list: initValues,
         complete: false,
         active: [],
-        location: null
+        location: null,
+        support: false
     };
 
     getLocation = (loc) => {
@@ -77,7 +78,7 @@ class Questions extends React.Component {
                 this.setState(state => ({list: support, complete: 'support'}))
                 break;
             case 'yes':
-                this.setState(state => ({list: week, complete: 'schedule'}));
+                this.setState(state => ({list: week, complete: 'schedule', support: true}));
                 break;
             default:
                 this.setState(state => ({complete: true}))
@@ -92,7 +93,7 @@ class Questions extends React.Component {
     }
 
     reset = () => {
-        this.setState(state => ({list: initValues, answers: [], days: [], active: [], title: 'What do you need help with?', complete: false, location: null}));
+        this.setState(state => ({list: initValues, answers: [], days: [], active: [], title: 'What do you need help with?', complete: false, location: null, support: false}));
     }
 
     chooseLocation = () => {
@@ -132,7 +133,7 @@ class Questions extends React.Component {
         } else {
             return(
                 <>
-                    <Listings answers={this.state.answers} days={this.state.days} location={this.state.location} />
+                    <Listings answers={this.state.answers} days={this.state.days} location={this.state.location} support={this.state.support} />
                     <button className="reset" onClick={() => {this.reset()}}>Start again</button>
                 </>
             )
