@@ -14,6 +14,9 @@ let App = () => {
         <Route path='/guided' component={Questions} />
       </BrowserRouter>
       </main>
+      <footer>
+        <p>&copy; BelleVie Care 2021</p>
+      </footer>
     </>
   );
 }
