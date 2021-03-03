@@ -11,7 +11,7 @@ class Listing extends React.Component {
     allReviews = () => {
         let reviews = this.props.reviews;
         if (this.props.isFull) {
-            return reviews.map(review => <li><p>{review.review}<span> - {review.author}, {review.town}</span></p><ul className="rating">{this.reviewRatings(review.rating)}</ul></li>);
+            return reviews.map(review => <li key={review.town}><p>{review.review}<span> - {review.author}, {review.town}</span></p><ul className="rating">{this.reviewRatings(review.rating)}</ul></li>);
         } else {
             return <li>{this.props.reviews[0].review} <span>{this.props.reviews[0].author}, {this.props.reviews[0].town}</span></li>;
         }
@@ -64,7 +64,6 @@ class Listing extends React.Component {
     }
 
     renderListing = () => {
-        console.log(this.props)
         let rating = new Array(this.props.rating).fill('1');
         if (this.props.isFull) {
             return (

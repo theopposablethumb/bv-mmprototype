@@ -43,16 +43,16 @@ class Questions extends React.Component {
     assignNextLevel = (answer) => {
         switch(answer) {
             case 'health':
-                this.setState(state => ({list: health}))
+                this.setState(state => ({list: health, complete: false}))
                 break;
             case 'leisure':
-                this.setState(state => ({list: leisure}))
+                this.setState(state => ({list: leisure, complete: false}))
                 break;
             case 'home':
-                this.setState(state => ({list: home}))
+                this.setState(state => ({list: home, complete: false}))
                 break;
             case 'security':
-                this.setState(state => ({list: security}))
+                this.setState(state => ({list: security, complete: false}))
                 break;
             case 'memory':
             case 'medication':
@@ -96,6 +96,11 @@ class Questions extends React.Component {
         this.setState(state => ({list: initValues, answers: [], days: [], active: [], title: 'What do you need help with?', complete: false, location: null, support: false}));
     }
 
+    backALevel = (level, title) => {
+        this.nextLevel(level, title);
+        console.log(this.state);
+    }
+
     chooseLocation = () => {
         if (!this.state.location) {
             return <LocationSearch locations={locations} getLocation={this.getLocation} />;
@@ -133,7 +138,7 @@ class Questions extends React.Component {
         } else {
             return(
                 <>
-                    <Listings answers={this.state.answers} days={this.state.days} location={this.state.location} support={this.state.support} />
+                    <Listings answers={this.state.answers} days={this.state.days} location={this.state.location} support={this.state.support} back={this.backALevel} />
                     <button className="reset" onClick={() => {this.reset()}}>Start again</button>
                 </>
             )

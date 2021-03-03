@@ -23,13 +23,15 @@ class Listings extends React.Component {
     }
 
     render() {
+        let answer1 = this.props.answers[0].split(" ")[0].toLowerCase();
+        let answer2 = this.props.answers[1].split(" ")[0].toLowerCase();
         return (
             <>
                 <h2>Available services in {this.props.location}</h2>
                 <h4>Change your selection</h4>
                 <ul className="selected">
-                    <li>{this.props.answers[0]}</li>
-                    <li>{this.props.answers[1]}</li>
+                    <li><button onClick={() => this.props.back(answer1, this.props.answers[0])} >{this.props.answers[0]}</button></li>
+                    <li><button onClick={() => this.props.back(answer2, this.props.answers[0])}>{this.props.answers[1]}</button></li>
                 </ul>
                 {this.viewListing()}
             </>
