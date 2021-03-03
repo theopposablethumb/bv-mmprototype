@@ -5,6 +5,8 @@ body {font-size: 16px; line-height: 1.5em; font-family: 'Roboto', sans-serif; fo
 header {background: #185D6F; color: #fff; text-align: center; padding: 1em;}
 h1 {font-size: 3em; font-weight: 400;}
 h2 {font-size: 2.5em; font-weight: 400; text-align: center; line-height: 1.5em;}
+h3 {font-size: 2em; font-weight: 400; line-height: 1.5em; margin: 1.5em 0 0 0;}
+h4 {font-size: 1.25em; font-weight: 400; line-height: 1.5em; margin: 1.5em 0 0 0;}
 p {margin: 1.5em 0 0;}
 .centered {text-align: center;}
 
@@ -42,9 +44,11 @@ ul.options li:hover {background: #d3edf2;}
 .week ul li {margin: 0 1em; width: 10%;}
 
 ul.days, ul.selected, ul.rating {list-style-type: none; margin: 0; padding: 0;}
+ul.selected {margin-top: 1em;}
 ul.days li, ul.selected li {display: inline-block; padding: 0.5em 0.75em; margin: 0 0.25em; background: #fff; border: 1px solid #ddd;}
+ul.selected li:first-child {margin-left: 0;}
 
-button.reset {padding: 0.5em 0.75em; background: #fff; border: 3px solid #8B7D3A; color: #8B7D3A;}
+button.reset {padding: 0.5em 0.75em; background: #fff; border: 3px solid #8B7D3A; color: #8B7D3A; margin: 4em 0 3em;}
 button.reset:hover {background: #8B7D3A; color: #fff;}
 button.next {padding: 0.5em 1.25em; background: #185D6F; color: #fff; font-weight: 500; border: 3px solid #185D6F;}
 button.next:hover {background: #489982; border: 3px solid #489982;}
@@ -56,7 +60,26 @@ button.next:hover {background: #489982; border: 3px solid #489982;}
 .price, .call {text-align: right;}
 .price {font-size: 1.5em; font-weight: 500; color: #8B7D3A; padding-right: 0.2em;}
 .price span {font-size: 0.85em;}
-a[href^="tel:"] {padding: 1em 1.5em; margin-top: 0.75em; background: #FFC247; border-radius: 8px; color: #333; text-decoration: none; font-weight: 700; display: inline-block;}
+.call a {padding: 1em 1.5em; margin-top: 0.75em; background: #FFC247; border-radius: 8px; color: #333; text-decoration: none; font-weight: 700; display: inline-block;}
 
 ul.rating span {display: none;}
-ul.rating li {display: inline-block; width: 20px; height: 20px; margin-right: 0.5em; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAEo2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjIwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMjAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIyMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMjAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLjAiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLjAiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjEtMDMtMDFUMTY6MzI6MzJaIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDIxLTAzLTAxVDE2OjMyOjMyWiI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpTZXE+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InByb2R1Y2VkIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZmZpbml0eSBEZXNpZ25lciAxLjkuMSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMS0wMy0wMVQxNjozMjozMloiLz4KICAgIDwvcmRmOlNlcT4KICAgPC94bXBNTTpIaXN0b3J5PgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KPD94cGFja2V0IGVuZD0iciI/PuYWfq8AAAGCaUNDUHNSR0IgSUVDNjE5NjYtMi4xAAAokXWRy0tCQRSHP7Uo0jCoRYsICWtl0QOkNkFKWCAhZpDVRm8+Ah+Xe5WQtkFboSBq02tRf0Ftg9ZBUBRBtAtaF7UpuZ2bgRF5hjnzzW/OOcycAWsko2T1hkHI5gpaOOBzzUcXXE1P2LDQRjf2mKKrE6FQkLr2fiuxYtf9Zq36cf+afTmhK2BpFh5XVK0gPCUcXC2oJm8Jdyjp2LLwibBHkwsK35h6vMrPJqeq/GmyFgn7wdom7Er94vgvVtJaVlhejjubKSo/9zFf4kjk5mZl7ZHZhU6YAD5cTDOJHy9DjIn30s8wA7KjTv7gd/4MeclVxKuU0FghRZoCHlGLUj0ha1L0hIwMJbP/f/uqJ0eGq9UdPmh8NIzXXmjahErZMD4ODKNyCLYHOM/V8vP7MPomermmuffAuQ6nFzUtvg1nG9B5r8a02Ldkk2lNJuHlGFqj0H4FLYvVnv2cc3QHkTX5qkvY2YU+iXcufQH7o2e1OcktOwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAURJREFUOI29lLtKBDEUhr8dXVBCsPMy2m9no+I0QgpFrG3stLESH8FSUduVrXwBwdrCKtjooJV21ruFjSAhauOl2CzM7szsZBzwhxByzp8vJxcCHjJahEaLGR/vqI8JOAZ+gO0iY63IYLSIgFs3jKSy8Z+BRosAiIFFF7p30O+8OUFBgTsJGMASBdvOrdBoMQE8A5MDqRegIZV9Gwo0WswBEbDs+gVgPGe9D+CB7nHEwJ1Utg1QM1rMA1fA7LCteKgDbARS2UfgrCIMoCmVfepdyklFaBM4hf4zHAEugM2SsEtgSyr71Qd00DHgGljxhN0A61LZz16g7x26xGGJ6o6SsBTQaboEcGowkAUMSwBT3n8HvgMtoOFay8VygVn/YQi06b6tc6nsayK3Z7Q4AHaB/SxgSkaLVaNF3cNXN1qsFQKr6hej8VF8/SLTIgAAAABJRU5ErkJggg==');}
+ul.rating li {display: inline-block; width: 20px; height: 20px; margin: 0 0.5em 0 0; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAEo2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjIwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMjAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIyMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMjAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLjAiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLjAiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjEtMDMtMDFUMTY6MzI6MzJaIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDIxLTAzLTAxVDE2OjMyOjMyWiI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpTZXE+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InByb2R1Y2VkIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZmZpbml0eSBEZXNpZ25lciAxLjkuMSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMS0wMy0wMVQxNjozMjozMloiLz4KICAgIDwvcmRmOlNlcT4KICAgPC94bXBNTTpIaXN0b3J5PgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KPD94cGFja2V0IGVuZD0iciI/PuYWfq8AAAGCaUNDUHNSR0IgSUVDNjE5NjYtMi4xAAAokXWRy0tCQRSHP7Uo0jCoRYsICWtl0QOkNkFKWCAhZpDVRm8+Ah+Xe5WQtkFboSBq02tRf0Ftg9ZBUBRBtAtaF7UpuZ2bgRF5hjnzzW/OOcycAWsko2T1hkHI5gpaOOBzzUcXXE1P2LDQRjf2mKKrE6FQkLr2fiuxYtf9Zq36cf+afTmhK2BpFh5XVK0gPCUcXC2oJm8Jdyjp2LLwibBHkwsK35h6vMrPJqeq/GmyFgn7wdom7Er94vgvVtJaVlhejjubKSo/9zFf4kjk5mZl7ZHZhU6YAD5cTDOJHy9DjIn30s8wA7KjTv7gd/4MeclVxKuU0FghRZoCHlGLUj0ha1L0hIwMJbP/f/uqJ0eGq9UdPmh8NIzXXmjahErZMD4ODKNyCLYHOM/V8vP7MPomermmuffAuQ6nFzUtvg1nG9B5r8a02Ldkk2lNJuHlGFqj0H4FLYvVnv2cc3QHkTX5qkvY2YU+iXcufQH7o2e1OcktOwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAURJREFUOI29lLtKBDEUhr8dXVBCsPMy2m9no+I0QgpFrG3stLESH8FSUduVrXwBwdrCKtjooJV21ruFjSAhauOl2CzM7szsZBzwhxByzp8vJxcCHjJahEaLGR/vqI8JOAZ+gO0iY63IYLSIgFs3jKSy8Z+BRosAiIFFF7p30O+8OUFBgTsJGMASBdvOrdBoMQE8A5MDqRegIZV9Gwo0WswBEbDs+gVgPGe9D+CB7nHEwJ1Utg1QM1rMA1fA7LCteKgDbARS2UfgrCIMoCmVfepdyklFaBM4hf4zHAEugM2SsEtgSyr71Qd00DHgGljxhN0A61LZz16g7x26xGGJ6o6SsBTQaboEcGowkAUMSwBT3n8HvgMtoOFay8VygVn/YQi06b6tc6nsayK3Z7Q4AHaB/SxgSkaLVaNF3cNXN1qsFQKr6hej8VF8/SLTIgAAAABJRU5ErkJggg==');}
+.product ul.rating li:last-child {width: 50px; background: none;}
+
+.flex {display: flex; flex-wrap: wrap;}
+.flex .image {width: 300px}
+.product {width: 70%; display: flex;}
+.product div {padding: 0 1em;}
+.product h2 {text-align: left; margin: 0 0 0.25em}
+
+div.bvApproved {padding: 0;}
+.bvApproved img {box-shadow: none; float: left; margin-right: 0.5em;}
+.bvApproved p {font-size: 1.4em; font-weight: 500; color: #185D6F; padding: 0.8em;}
+
+.cta {width: 50%; box-sizing: border-box; border-radius: 8px; background: #e6f1f2;}
+
+ul.reviews {list-style: none; padding: 0;}
+.reviews li {display: flex; margin: 2em 0}
+.reviews .rating {margin-left: 1em; width: 200px}
+.reviews p {margin: 0;}
+.reviews span {font-style: italic;}

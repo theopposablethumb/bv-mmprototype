@@ -26,9 +26,10 @@ class Listings extends React.Component {
         return (
             <>
                 <h2>Available services in {this.props.location}</h2>
-                <p>Change your selection</p>
+                <h4>Change your selection</h4>
                 <ul className="selected">
-                    {this.props.answers.map(answer => <li key={answer}>{answer}</li>)}
+                    <li>{this.props.answers[0]}</li>
+                    <li>{this.props.answers[1]}</li>
                 </ul>
                 {this.viewListing()}
             </>

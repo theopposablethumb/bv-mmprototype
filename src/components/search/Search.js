@@ -1,6 +1,6 @@
 import React from 'react';
 
-class LocationSearch extends React.Component {
+class Search extends React.Component {
     state = {
         showOptions: false,
         filteredOptions: [],
@@ -91,4 +91,4 @@ class LocationSearch extends React.Component {
     }
 }
 
-export default LocationSearch;
+export default Search;
