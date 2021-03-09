@@ -99,15 +99,17 @@ class Listing extends React.Component {
                 <>
                     {this.back()}
                     <div className="listing">
-                        <div className="image">
-                            <img src={this.props.img} width="300" height="300" alt={this.props.title} />
-                        </div>
-                        <div>
-                            {this.heading()}
-                            <ul className="rating">{rating.map(score => <li><span>{score}</span></li>)}</ul>
-                            <p>{this.props.description}</p>
-                            <ul className="reviews">{this.allReviews()}</ul>
-                            <p>£{this.props.price}</p>
+                        <div className="flex">
+                            <div className="image">
+                                <img src={this.props.img} width="300" height="300" alt={this.props.title} />
+                            </div>
+                            <div className="col">
+                                {this.heading()}
+                                <ul className="rating">{rating.map(score => <li><span>{score}</span></li>)}</ul>
+                                <p>{this.props.description}</p>
+                                <ul className="reviews">{this.allReviews()}</ul>
+                                <p>£{this.props.price}</p>
+                            </div>
                         </div>
                     </div>
                 </>

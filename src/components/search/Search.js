@@ -1,39 +1,43 @@
 import React from 'react';
+import {locations, health, leisure, home, security } from './../../data';
 
 class Search extends React.Component {
     state = {
         showOptions: false,
-        filteredOptions: [],
+        filteredLocations: [],
+        filteredServices: [],
         activeOption: 0,
-        userInput: ''
+        locationInput: '',
+        serviceInput: ''
     }
 
+    locations = locations;
+    services = health.concat(leisure, home, security);
+
     checkForLocation = (e) => {
-        const locations = this.props.locations;
+        const locations = this.locations;
         const userInput = e.currentTarget.value;
         const filteredOptions = locations.filter( (location) => location.town.toString().toLowerCase().indexOf(userInput.toLowerCase()) > -1 );
         this.setState({
             activeOption: 0,
-            filteredOptions: filteredOptions,
+            filteredLocations: filteredOptions,
             showOptions: true,
-            userInput: userInput
+            locationInput: userInput
         });
     };
 
-    selectLocation = (e) => {
-        this.props.getLocation(e.currentTarget.innerText);
+    selectLocation = (town, coords) => {
         this.setState({
             activeOption: 0,
-            filteredOptions: [],
+            filteredLocations: {},
             showOptions: false,
-            userInput: e.currentTarget.innerText
+            locationInput: {town: town, coords: coords}
           });
-          console.log(this.state);
     };
 
     selectLocationKeys = (e) => {
         const activeOption = this.state.activeOption;
-        const locations = this.props.locations;
+        const locations = this.locations;
         const userInput = e.currentTarget.value;
         const filteredOptions = locations.filter( (location) => location.town.toString().toLowerCase().indexOf(userInput.toLowerCase()) > -1 );
         if (e.keyCode === 13) {
@@ -41,9 +45,8 @@ class Search extends React.Component {
                 activeOption: 0,
                 filteredOptions: [],
                 showOptions: false,
-                userInput: filteredOptions[activeOption].town
+                locationInput: {town: filteredOptions[activeOption].town, coords: filteredOptions[activeOption].coords}
             });
-            this.props.getLocation(filteredOptions[activeOption].town);
         } else if (e.keyCode === 38) {
             if (activeOption === 0) {return;}
             this.setState({ activeOption: activeOption - 1 });
@@ -55,8 +58,8 @@ class Search extends React.Component {
 
     showLocations = () => {
         let showOptions = this.state.showOptions;
-        let userInput = this.state.userInput;
-        let filteredOptions = this.state.filteredOptions;
+        let userInput = this.state.locationInput;
+        let filteredOptions = this.state.filteredLocations;
         let activeOption = this.state.activeOption;
 
         if (showOptions && userInput) {
@@ -66,7 +69,7 @@ class Search extends React.Component {
                         {filteredOptions.map((optionName, index) => {
                             let className;
                             if (index === activeOption) {className = 'active';}
-                            return (<li className={className} key={optionName.town} onClick={(e) => this.selectLocation(e)}>{optionName.town}</li>);
+                            return (<li className={className} key={optionName.town} onClick={(e) => this.selectLocation(optionName.town, optionName.coords)}>{optionName.town}</li>);
                         })}
                     </ul>
                 );
@@ -76,16 +79,98 @@ class Search extends React.Component {
         }
     }
 
+
+
+
+    checkForService = (e) => {
+        const services = this.services;
+        const userInput = e.currentTarget.value;
+        const filteredOptions = services.filter( (service) => service.title.toString().toLowerCase().indexOf(userInput.toLowerCase()) > -1 );
+        this.setState({
+            activeOption: 0,
+            filteredServices: filteredOptions,
+            showOptions: true,
+            serviceInput: userInput
+        });
+    };
+
+    selectService = (e) => {
+        this.setState({
+            activeOption: 0,
+            filteredServices: [],
+            showOptions: false,
+            serviceInput: e.currentTarget.innerText
+          });
+    };
+
+    selectServiceKeys = (e) => {
+        const activeOption = this.state.activeOption;
+        const services = this.services;
+        const userInput = e.currentTarget.value;
+        const filteredOptions = services.filter( (service) => service.title.toString().toLowerCase().indexOf(userInput.toLowerCase()) > -1 );
+        if (e.keyCode === 13) {
+            this.setState({
+                activeOption: 0,
+                filteredOptions: [],
+                showOptions: false,
+                userInput: filteredOptions[activeOption].name
+            });
+        } else if (e.keyCode === 38) {
+            if (activeOption === 0) {return;}
+            this.setState({ activeOption: activeOption - 1 });
+        } else if (e.keyCode === 40) {
+            if (activeOption - 1 === filteredOptions.length) {return;}
+            this.setState({ activeOption: activeOption + 1 });
+        }
+    };
+
+    showServices = () => {
+        let showOptions = this.state.showOptions;
+        let userInput = this.state.serviceInput;
+        let filteredOptions = this.state.filteredServices;
+        let activeOption = this.state.activeOption;
+
+        if (showOptions && userInput) {
+            if (filteredOptions.length) {
+                return (
+                    <ul className="options">
+                        {filteredOptions.map((optionName, index) => {
+                            let className;
+                            if (index === activeOption) {className = 'active';}
+                            return (<li className={className} key={optionName.title} onClick={(e) => this.selectService(e)}>{optionName.title}</li>);
+                        })}
+                    </ul>
+                );
+            } else {
+                return <ul className="options"><li>Try again</li></ul>;
+            }
+        }
+    }
+
+ /*   changeSearchDisplay = () => {
+        if (this.props.search) {
+            return 'min';
+        }
+    } */
+
     render() {
         return (
             <>
                 <h2>Where would you like support living your best life?</h2>
-                <div className="questions">
-                    <form autoComplete="off" className="location">
-                        <input type="text" name="location" placeholder="Enter your location" onKeyDown={(e) => this.selectLocationKeys(e)} value={this.state.userInput} onChange={(e) => {this.checkForLocation(e)}} ></input>
+                <form autoComplete="off" className="min">
+                    <fieldset>
+                        <label htmlFor="location">Enter your location</label>
+                        <input type="text" name="location" placeholder="Enter your location" onKeyDown={(e) => this.selectLocationKeys(e)} value={this.state.locationInput.town} onChange={(e) => {this.checkForLocation(e)}} ></input>
                         {this.showLocations()}
-                    </form>
-                </div>
+                        <button onClick={(e) => {this.props.setSearchTerms(e, this.state.locationInput, /*this.state.serviceInput*/)}} className="next">Search</button>
+                    </fieldset>
+                    {/* <fieldset>
+                        <label htmlFor="services">What are you looking for?</label>
+                        <input type="text" name="services" placeholder="What are you looking for?" onKeyDown={(e) => this.selectServiceKeys(e)} value={this.state.serviceInput} onChange={(e) => {this.checkForService(e)}} ></input>
+                        {this.showServices()}
+                    </fieldset> */}
+                   
+                </form>
             </>
         )
     }

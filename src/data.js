@@ -2,7 +2,7 @@ export const locations = [{town: 'Abingdon', coords: [-1.2878968802672597, 51.67
 export const health = [{title:'Memory and Mood', name: 'memory'}, {title: 'Medication', name: 'medication'}, {title: 'Mobility', name: 'mobility'}, {title: 'Hearing', name: 'hearing'}, {title: 'Vision', name: 'vision'}];
 export const leisure = [{title: 'Gardening and outdoors', name: 'gardening'}, {title: 'Arts and Crafts', name: 'arts'}, {title: 'Puzzles and Quizes', name: 'puzzles'}, {title: 'Exercise and fitness', name: 'exercise'}, {title: 'Hobbies and leisure', name: 'hobbies'}, {title: 'Listening to music, radio, or audio books', name: 'listening'}];
 export const home = [{title: 'House hold chores and hygiene', name: 'chores'}, {title: 'DIY and maintenance', name: 'DIY'}, {title: 'Stairs', name: 'stairs'}, {title: 'Cooking and meals', name: 'cooking'}];
-export const security = [{title: 'Help in emergencies', name: 'emergencies'}, {title: 'Living alone', name: 'alone'}, {title: 'Living alone', name: 'alone'}, {title: 'In the kitchen', name: 'kitchen'}, {title: 'In the bathroom', name: 'bathroom'}];
+export const security = [{title: 'Help in emergencies', name: 'emergencies'}, {title: 'Living alone', name: 'alone'}, {title: 'In the kitchen', name: 'kitchen'}, {title: 'In the bathroom', name: 'bathroom'}];
 
 export const support = [{title: 'Yes', name: 'yes'}, {title: 'No', name: 'no'}];
 export const week = [{title: 'Monday', name: 'monday'}, {title: 'Tuesday', name: 'tuesday'}, {title: 'Wednesday', name: 'wednesday'}, {title: 'Thursday', name: 'thursday'}, {title: 'Friday', name: 'friday'}, {title: 'Saturday', name: 'saturday'}, {title: 'Sunday', name: 'sunday'}];
@@ -22,180 +22,258 @@ export const carers = [
         name: 'Lisa',
         team: 'Abingdon',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/237306F6-CBEB-43D6-9BAA-E3F096FF06BD-rotated.jpeg',
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
     },
     {
         name: 'Lucy',
         team: 'Abingdon',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/8C6AC106-D7CE-427A-847E-D387036AE87D.jpeg',
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
     },
     {
         name: 'Mark',
         team: 'Abingdon',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/20180818_175329-1.jpg',
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
     },
     {
         name: 'Jean',
         team: 'Abingdon',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/20210202_150331.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+    },
+    {
+        name: 'Chevonne',
+        team: 'Abingdon',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/03/Chevonne.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
     },
     {
         name: 'Chevonne',
         team: 'Henley',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/03/Chevonne.jpg',
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
     },
     {
         name: 'Charley',
         team: 'Henley',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/3F236232-6008-4634-B5D0-E0A3082DB1CD.jpeg',
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
     },
     {
         name: 'Christine',
         team: 'Henley',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/profile-pic.jpg',
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
     },
     {
         name: 'Emma',
         team: 'Henley',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/emma-1-e1603211658884.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+    },
+    {
+        name: 'Fiona',
+        team: 'Henley',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20201110_124943136-2.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
     },
     {
         name: 'Fiona',
         team: 'Oxford',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20201110_124943136-2.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20201110_124943136-2.jpg',
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],  
     },
     {
         name: 'Lauren',
         team: 'Oxford',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Photo_Lauren.png'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Photo_Lauren.png',
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Greta',
         team: 'Oxford',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Screenshot-2021-01-17-at-16.10.19.png'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Screenshot-2021-01-17-at-16.10.19.png',
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Parveen',
         team: 'Oxford',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20191119_001858_431.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20191119_001858_431.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+    },
+    {
+        name: 'Caroline',
+        team: 'Oxford',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Bellevie-ID.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
     },
     {
         name: 'Caroline',
         team: 'Wantage',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Bellevie-ID.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Bellevie-ID.jpg',
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
     },
     {
         name: 'Billy',
         team: 'Wantage',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Billy-Picture-rotated.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Billy-Picture-rotated.jpg',
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Amelia',
         team: 'Wantage',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Untitled.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Untitled.jpg',
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Alice',
         team: 'Wantage',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Alice.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Alice.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+    },
+    {
+        name: 'Peter',
+        team: 'Wantage',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/P1150609-1.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
     },
     {
         name: 'Peter',
         team: 'Witney',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/P1150609-1.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/P1150609-1.jpg',
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Kelly',
         team: 'Witney',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/E693E814-AB89-47BC-AE1C-F0FA7A125B20.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/E693E814-AB89-47BC-AE1C-F0FA7A125B20.jpg',
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Julie',
         team: 'Witney',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/ID-image-JK.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/ID-image-JK.jpg',
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Angie',
         team: 'Witney',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_0483-rotated.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_0483-rotated.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+    },
+    {
+        name: 'Karen',
+        team: 'Witney',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_1180.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
     },
     {
         name: 'Karen',
         team: 'Woodstock',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_1180.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_1180.jpg',
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
     },
     {
         name: 'Imogen',
         team: 'Woodstock',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Imogen.jpeg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Imogen.jpeg',
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Vicki',
         team: 'Woodstock',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Vicki.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Vicki.jpg',
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
     },
     {
         name: 'Tina',
         team: 'Woodstock',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tina.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tina.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
     },
     {
         name: 'Neil',
         team: 'County Durham',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/01/neil.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/01/neil.jpg',
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Lisa',
         team: 'County Durham',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/image0-2.png'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/image0-2.png',
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Glen',
         team: 'County Durham',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/BelleVie-photo-2-scaled.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/BelleVie-photo-2-scaled.jpg',
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Sara',
         team: 'County Durham',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Sara.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Sara.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+    },
+    {
+        name: 'Tesni',
+        team: 'County Durham',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tesni.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
     },
     {
         name: 'Tesni',
         team: 'Newcastle upon Tyne',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tesni.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tesni.jpg',
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Camilla',
         team: 'Newcastle upon Tyne',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Camilla.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Camilla.jpg',
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Grace',
         team: 'Newcastle upon Tyne',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Grace.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Grace.jpg',
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Marc',
         team: 'Newcastle upon Tyne',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Marc.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Marc.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+    },
+    {
+        name: 'Lora',
+        team: 'Newcastle upon Tyne',
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Lora.png',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
     },
     {
         name: 'Lora',
         team: 'Northumberland',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Lora.png'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Lora.png',
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Karina',
         team: 'Northumberland',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/karina-scaled.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/karina-scaled.jpg',
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
     },
     {
         name: 'Mauricio',
         team: 'Northumberland',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/mauricio-1-e1602339778439.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/mauricio-1-e1602339778439.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
     },
     {
         name: 'Beth',
         team: 'Northumberland',
-        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/beth.jpg'
+        img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/beth.jpg',
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
     },
 ]

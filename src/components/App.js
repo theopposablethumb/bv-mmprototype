@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Questions from './guided-flow/questions';
+import Questions from './guided-flow/Questions';
+import Start from './search/Start';
 import '../index.css';
 
 let App = () => {
@@ -12,6 +13,7 @@ let App = () => {
       <main>
       <BrowserRouter>
         <Route path='/guided' component={Questions} />
+        <Route path='/search' component={Start} />
       </BrowserRouter>
       </main>
       <footer>
