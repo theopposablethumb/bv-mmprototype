@@ -147,12 +147,6 @@ class Search extends React.Component {
         }
     }
 
- /*   changeSearchDisplay = () => {
-        if (this.props.search) {
-            return 'min';
-        }
-    } */
-
     render() {
         return (
             <>
@@ -164,12 +158,6 @@ class Search extends React.Component {
                         {this.showLocations()}
                         <button onClick={(e) => {this.props.setSearchTerms(e, this.state.locationInput, /*this.state.serviceInput*/)}} className="next">Search</button>
                     </fieldset>
-                    {/* <fieldset>
-                        <label htmlFor="services">What are you looking for?</label>
-                        <input type="text" name="services" placeholder="What are you looking for?" onKeyDown={(e) => this.selectServiceKeys(e)} value={this.state.serviceInput} onChange={(e) => {this.checkForService(e)}} ></input>
-                        {this.showServices()}
-                    </fieldset> */}
-                   
                 </form>
             </>
         )
