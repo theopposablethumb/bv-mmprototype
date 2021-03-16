@@ -24,7 +24,6 @@ class Services extends React.Component {
         }
         
         this.setState(state => ({active: index}));
-        console.log(this.state);
     }
 
     nextSlide = () => {
@@ -38,11 +37,9 @@ class Services extends React.Component {
         }
             
         this.setState(state => ({ active: index}));
-        console.log(this.state);
     }
 
     activeSlide = (index) => {
-        console.log(index);
         if (index === this.state.active) {
             return 'active slide';
         } else {

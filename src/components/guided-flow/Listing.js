@@ -61,8 +61,8 @@ class Listing extends React.Component {
                 <>
                     {this.back()}
                     <div className="flex">
-                        <div className="image">
-                            <img src={this.props.img} width="300" height="300" alt={this.props.title} />
+                        <div className="prodImage">
+                            <img src={this.props.img} alt={this.props.title} />
                         </div>
                         <div className="product">
                             <div>
@@ -94,7 +94,7 @@ class Listing extends React.Component {
                     <div className="listing">
                         <div className="flex">
                             <div className="image">
-                                <img src={this.props.img} width="300" height="300" alt={this.props.title} />
+                                <img src={this.props.img} alt={this.props.title} />
                             </div>
                             <div className="col">
                                 {this.heading()}

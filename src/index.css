@@ -3,7 +3,7 @@
 body {font-size: 16px; line-height: 1.5em; font-family: 'Roboto', sans-serif; font-weight: 400; background: #FAFAFA; color: #333; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 0; padding: 0;}
 
 header, footer {background: #185D6F; color: #fff; text-align: center; padding: 1em;}
-footer {text-align: left; margin-top: 6em;}
+footer {text-align: left; margin-top: 3em;}
 h1 {font-size: 3em; font-weight: 400;}
 h2 {font-size: 2.5em; font-weight: 400; text-align: center; line-height: 1.5em;}
 h3 {font-size: 2em; font-weight: 400; line-height: 1.5em; margin: 1.5em 0 0 0;}
@@ -19,7 +19,7 @@ main {width: 80vw; margin: 0 auto;}
 form.location {position: relative;}
 .autocompleteLocations { position: absolute; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 10; top: 100%; left: 0; right: 0; }
 
-.questions {width: 30vw; margin: 0 auto;}
+.questions {width: 30vw; margin: 0 auto; overflow: auto;}
 .questions.week {width: 100%;}
 .week ul {display: flex; justify-content: center;}
 
@@ -45,6 +45,16 @@ ul.options {background: #f5f5f5; border: 1px solid #E4E4E4; margin: 0; padding: 
 ul.options li {padding: 0.75em 1em;}
 ul.options li.active {background: #d3f2f1; border: 1px solid #9daeb0;}
 ul.options li:hover {background: #d3edf2;}
+
+.flex.services {justify-content: space-between; margin-top: 3em}
+.care div.service {width: 24%; background: #fff; border-radius: 4px; padding: 0;}
+.service h4 {margin-top: 1em; font-weight: 500;}
+.service ul {padding-left: 1.2em;}
+.flex .service .image {width: 100%; padding: 0}
+.flex .service .image img {box-shadow: none;}
+.care .service div:last-of-type {padding: 0 0.75em;}
+.flex.services li {position: relative; opacity: 1;}
+.care .flex div.service:last-of-type {padding: 0;}
 
 .week ul {list-style-type: none;}
 .week ul button {padding: 1.5em 0.75em;}
@@ -77,6 +87,8 @@ button.next:hover {background: #489982; border: 3px solid #489982;}
 .care .config {background: #f5f5f5; margin-top: 1.5em; padding: 0 1em 3em 1em; border-top: 1px solid #bbb; border-bottom: 1px solid #bbb; }
 
 .listing {background: #eee; border: 1px solid #999; border-radius: 4px; padding: 1em; margin: 3em;}
+.listing .image {width: 30%;}
+.listing .image img {width: 100%}
 .listing .col {width: 66%; margin-left: 2em;}
 .listing h2 {text-align: left; text-decoration: underline; font-size: 2em; color: #185D6F; margin: 0 0 0.25em;}
 .listing h2:hover {text-decoration: none; color: #489982;}
@@ -97,8 +109,9 @@ ul.rating li {display: inline-block; width: 20px; height: 20px; margin: 0 0.5em 
 .product ul.rating li:last-child {width: 50px; background: none;}
 
 .flex {display: flex; flex-wrap: wrap;}
-.flex .image {width: 300px}
 .product {width: 70%; display: flex; margin-bottom: 2em;}
+.prodImage {width: 30%;}
+.prodImage img {width: 100%;}
 .product div {padding: 0 1em;}
 .product h2 {text-align: left; margin: 0 0 0.25em}
 

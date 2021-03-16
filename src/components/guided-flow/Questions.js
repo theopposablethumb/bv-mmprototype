@@ -10,6 +10,7 @@ class Questions extends React.Component {
     state = {
         title: 'What do you need help with',
         answer: null,
+        type: null,
         answers: [],
         days: [],
         list: initValues,
@@ -31,11 +32,12 @@ class Questions extends React.Component {
         }
     }
 
-    nextLevel = (answer, title) => {
+    nextLevel = (answer, title, type) => {
         this.setState(state => ({
             answer: answer,
             answers: [...this.state.answers, title],
-            title: title
+            title: title,
+            type: type
         }));
         this.assignNextLevel(answer);
     }
@@ -62,7 +64,7 @@ class Questions extends React.Component {
 
     renderNextLevel = () => {
         let list = this.state.list;
-        return list.map(list => <li key={list.name}><button onClick={() => {this.nextLevel(list.name, list.title)}}>{list.title}</button></li>);
+        return list.map(list => <li key={list.name}><button onClick={() => {this.nextLevel(list.name, list.title, list.type)}}>{list.title}</button></li>);
 
     }
 
@@ -102,17 +104,10 @@ class Questions extends React.Component {
                     </div>
                 </>
             )
-        } else if (this.state.complete === 'schedule') {
-            return(
-                <>
-                    <h2>When would you like regular support?</h2>
-                    <Days list={this.state.list} nextLevel={this.assignNextLevel}  selectDays={this.selectDays} />
-                </>
-            )
         } else {
             return(
                 <>
-                    <Listings answers={this.state.answers} days={this.state.days} location={this.state.location} support={this.state.support} back={this.backALevel} />
+                    <Listings answers={this.state.answers} days={this.state.days} location={this.state.location} type={this.state.type} back={this.backALevel} />
                     <button className="reset" onClick={() => {this.reset()}}>Start again</button>
                 </>
             )

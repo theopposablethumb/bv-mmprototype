@@ -8,7 +8,7 @@ class SearchListing extends React.Component {
             <div className="listing">
                 <div className="flex">
                     <div className="image">
-                        <img src={this.props.img} width="300" height="300" alt={this.props.title} />
+                        <img src={this.props.img} alt={this.props.title} />
                     </div>
                     <div className="col">
                         <h2 className="notClickable">{this.props.title}</h2>

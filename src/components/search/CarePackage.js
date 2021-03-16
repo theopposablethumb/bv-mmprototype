@@ -1,6 +1,7 @@
 import React from "react";
 import SelectDays from './SelectDays';
 import Team from './Team';
+import ServicesOffered from './ServicesOffered';
 
 class CarePackage extends React.Component {
     state = {
@@ -44,13 +45,7 @@ class CarePackage extends React.Component {
                     <h2>Support to Live Well at Home: Your All-Inclusive Package</h2>
                     <p>We can support you or your loved one to live well at home in {this.props.location}. Our all-inclusive packages are tailored to your needs and aspirations.</p>
                     <p>Our fabulous Wellbeing Support Workers provide outstanding support with the practical aspects of living at home, while building a relationship with you. We believe that care should be person-centred. We take the time to get to know you, your interests and your aspirations.</p>
-                    <ul>
-                        <li>Practical support such as personal care or meal preparation.</li> 
-                        <li>Companionship and support to be included in the local community.</li> 
-                        <li>Help around the house such as cleaning, DIY and pet care.</li>
-                        <li>Additional services as and when needed such as a gardener or a hairdresser. </li>
-                        <li>Products to help maintain and improve your quality of life. </li>
-                    </ul>
+                    <ServicesOffered /> 
                 </div>
                 <div className="config">
                     <SelectDays selectDays={this.selectDays} />

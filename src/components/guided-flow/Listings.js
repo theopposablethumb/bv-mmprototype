@@ -40,17 +40,25 @@ class Listings extends React.Component {
     }
 
     viewListing = () => {
-        if (this.state.listing === null) {
+        let listings;
+        if (this.props.type === 'service') {
+            listings = products.filter(product => {return product.type === 'service'});
+        } else {
+            listings = products.filter(product => {return product.type === 'product'});
+        };
+        
+        if (this.state.listing === null) {  
             document.querySelector('h2').scrollIntoView({ behavior: 'smooth' });
-            return products.map((product, index) => <Listing key={index} index={index} title={product.title} description={product.description} img={product.image} price={product.price} rating={product.rating} reviews={product.reviews} listing={this.state.listing} viewListing={this.setListing} />)
+            return listings.map((product, index) => <Listing key={index} index={index} title={product.title} description={product.description} img={product.image} price={product.price} rating={product.rating} reviews={product.reviews} listing={this.state.listing} viewListing={this.setListing} />)
         } else {
             let i = this.state.listing;
             document.querySelector('h2').scrollIntoView({ behavior: 'smooth' });
-            return <Listing title={products[i].title} description={products[i].description} img={products[i].image} price={products[i].price} rating={products[i].rating} reviews={products[i].reviews} support={this.props.support} location={this.props.location} days={this.props.days} answers={this.props.answers} isFull={true} showCart={this.showCart} resetListing={this.resetListing} />;
+            return <Listing title={listings[i].title} description={listings[i].description} img={listings[i].image} price={listings[i].price} rating={listings[i].rating} reviews={listings[i].reviews} support={this.props.support} location={this.props.location} days={this.props.days} answers={this.props.answers} isFull={true} showCart={this.showCart} resetListing={this.resetListing} />;
         }
     }
 
     render() {
+        console.log(this.props);
         let answer1 = this.props.answers[0].split(" ")[0].toLowerCase();
         let answer2 = this.props.answers[1].split(" ")[0].toLowerCase();
         return (
