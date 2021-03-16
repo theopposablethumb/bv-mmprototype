@@ -9,10 +9,6 @@ class SearchListings extends React.Component {
 
     products = products;
 
-    displayListings = () => {
-        return products.map(product => <SearchListing title={product.title} rating={product.rating} description={product.description} reviews={product.reviews} price={product.price} img={product.image} showCart={this.props.showCart} />)
-    }
-
     selectDays = (day) => {
         this.setState(state => ({days: [ ...this.state.days, day ] }));
     };
@@ -22,9 +18,6 @@ class SearchListings extends React.Component {
             <>
                 <DisplayMap coords={this.props.location.coords} />
                 <CarePackage location={this.props.location.town}  days={this.state.days} />
-                <h2>Looking for something extra?</h2>
-                <p>We offer a range of products that can help you live your best life at home. Our care teams will even deliver and help you set up your new purchase.</p>
-                {this.displayListings()}
             </>
         )
     }

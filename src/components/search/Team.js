@@ -25,6 +25,7 @@ class Team extends React.Component {
         return (
             <>
                 <h3>The following members of our team are available to support you in {this.props.location}</h3>
+                <p>You can relax in the knowledge that our local team of Wellbeing Support Workers are on-hand to support you at home and organise products and services tailored to your needs, all included in your monthly subscription price. </p>
                 <ul className="flex carers">
                     {this.renderCarers()}
                 </ul>

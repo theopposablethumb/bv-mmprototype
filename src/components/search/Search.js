@@ -150,7 +150,7 @@ class Search extends React.Component {
     render() {
         return (
             <>
-                <h2>Where would you like support living your best life?</h2>
+                <h2>Where would you like support to live your best life at home?</h2>
                 <form autoComplete="off" className="min">
                     <fieldset>
                         <label htmlFor="location">Enter your location</label>

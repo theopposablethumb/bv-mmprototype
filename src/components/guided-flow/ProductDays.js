@@ -2,28 +2,31 @@ import React from 'react';
 import {week} from './../../data';
 
 class ProductDays extends React.Component {
-    state = {active: [], days: week}
+    state = {active: null, days: week}
 
     activeDay = (day) => {
-        this.setState(state => ({active: [...this.state.active, day]}));
+        this.setState(state => ({active: day}));
     }
 
-    selectDays = (day) => {
-        this.activeDay(day);
-    }
-
-    /*nextLevelDays = (answer, e) => {
+    selectDays = (e, day) => {
         e.preventDefault();
-    } */
+        this.activeDay(day);
+        this.props.day(day);
+    }
+
+    selectedDay = (list) => {
+        if (this.state.active) {
+            return this.state.active.includes(list.title) ? 'selected' : '';
+        }  
+    }
 
     render() {
         return (
             <div className="week">
-                <h3>Would you like a carer to help you install your </h3>
+                <h4>When would you like one of our Wellbeing Support team to help set up your {this.props.product}?</h4>
                 <ul>
-                    {this.state.days.map(list => <li key={list.name}><button className={this.state.active.includes(list.title) ? 'selected' : ''} onClick={() => {this.selectDays(list.title)}}>{list.title}</button></li>)}
+                    {this.state.days.map(list => <li key={list.name}><button className={this.selectedDay(list)} onClick={(e) => {this.selectDays(e, list.title)}}>{list.title}</button></li>)}
                 </ul>
-                <button className="next right">Next</button>
             </div>
         )
     }

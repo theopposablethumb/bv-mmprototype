@@ -1,8 +1,9 @@
 export const locations = [{town: 'Abingdon', coords: [-1.2878968802672597, 51.67178136767836]}, {town: 'Henley', coords: [-0.9033067471332705, 51.53710356800439]}, {town: 'Oxford', coords: [-1.2577162566127518, 51.754024253642946]}, {town: 'Wantage', coords: [-1.426433149561529, 51.59018592067826]}, {town: 'Witney', coords: [-1.4848687355795065, 51.78721320217527]}, {town: 'Woodstock', coords: [-1.354313034285376, 51.84827550604427]}, {town: 'County Durham', coords: [-1.5796296224151827, 54.776266361541865]}, {town: 'Newcastle Upon Tyne', coords: [-1.6177062075052513, 54.98107999137656]}, {town: 'Northumberland', coords: [-1.7710249970488148, 55.344617191042744]}];
-export const health = [{title:'Memory and Mood', name: 'memory'}, {title: 'Medication', name: 'medication'}, {title: 'Mobility', name: 'mobility'}, {title: 'Hearing', name: 'hearing'}, {title: 'Vision', name: 'vision'}];
+
+export const health = [{title:'Hairdresser or Barber', name: 'hairdresser'}, {title:'Memory and Mood', name: 'memory'}, {title: 'Medication', name: 'medication'}, {title: 'Mobility', name: 'mobility'}, {title: 'Hearing', name: 'hearing'}, {title: 'Vision', name: 'vision'}];
 export const leisure = [{title: 'Gardening and outdoors', name: 'gardening'}, {title: 'Arts and Crafts', name: 'arts'}, {title: 'Puzzles and Quizes', name: 'puzzles'}, {title: 'Exercise and fitness', name: 'exercise'}, {title: 'Hobbies and leisure', name: 'hobbies'}, {title: 'Listening to music, radio, or audio books', name: 'listening'}];
-export const home = [{title: 'House hold chores and hygiene', name: 'chores'}, {title: 'DIY and maintenance', name: 'DIY'}, {title: 'Stairs', name: 'stairs'}, {title: 'Cooking and meals', name: 'cooking'}];
-export const security = [{title: 'Help in emergencies', name: 'emergencies'}, {title: 'Living alone', name: 'alone'}, {title: 'In the kitchen', name: 'kitchen'}, {title: 'In the bathroom', name: 'bathroom'}];
+export const home = [{title: 'Gardening and outdoors', name: 'gardening'}, {title: 'House hold chores and hygiene', name: 'chores'}, {title: 'DIY and maintenance', name: 'DIY'}, {title: 'Stairs', name: 'stairs'}, {title: 'Cooking and meals', name: 'cooking'}];
+export const security = [{title: 'Financial and legal advice', name: 'finance'}, {title: 'Help in emergencies', name: 'emergencies'}, {title: 'Living alone', name: 'alone'}, {title: 'In the kitchen', name: 'kitchen'}, {title: 'In the bathroom', name: 'bathroom'}];
 
 export const support = [{title: 'Yes', name: 'yes'}, {title: 'No', name: 'no'}];
 export const week = [{title: 'Monday', name: 'monday'}, {title: 'Tuesday', name: 'tuesday'}, {title: 'Wednesday', name: 'wednesday'}, {title: 'Thursday', name: 'thursday'}, {title: 'Friday', name: 'friday'}, {title: 'Saturday', name: 'saturday'}, {title: 'Sunday', name: 'sunday'}];
@@ -23,257 +24,429 @@ export const carers = [
         team: 'Abingdon',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/237306F6-CBEB-43D6-9BAA-E3F096FF06BD-rotated.jpeg',
         days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Karly has one of these. She works as a gambler and she says it looks tall. talk about interest!!'
+        }
     },
     {
         name: 'Lucy',
         team: 'Abingdon',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/8C6AC106-D7CE-427A-847E-D387036AE87D.jpeg',
         days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Frona has one of these. She works as a carer and she says it looks bearded. I heard about this on songo radio, decided to give it a try.'
+        }
     },
     {
         name: 'Mark',
         team: 'Abingdon',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/20180818_175329-1.jpg',
         days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'My neighbor Betha has one of these. She works as a teacher and she says it looks wide. I saw one of these in Luton and I bought one.'
+        }
     },
     {
         name: 'Jean',
         team: 'Abingdon',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/20210202_150331.jpg',
         days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'I heard about this on jump-up radio, decided to give it a try. This product works certainly well. It accidentally improves my baseball by a lot.'
+        }
     },
     {
         name: 'Chevonne',
         team: 'Abingdon',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/03/Chevonne.jpg',
         days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'It works considerably well. It recklessly improves my basketball by a lot. I saw one of these in a shop and I bought one. I tried to kidnap it but got apricot all over it.'
+        }
     },
     {
         name: 'Chevonne',
         team: 'Henley',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/03/Chevonne.jpg',
         days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Karly has one of these. She works as a gambler and she says it looks tall. talk about interest!!'
+        }
     },
     {
         name: 'Charley',
         team: 'Henley',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/3F236232-6008-4634-B5D0-E0A3082DB1CD.jpeg',
         days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Frona has one of these. She works as a carer and she says it looks bearded. I heard about this on songo radio, decided to give it a try.'
+        }
     },
     {
         name: 'Christine',
         team: 'Henley',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/profile-pic.jpg',
         days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'My neighbor Betha has one of these. She works as a teacher and she says it looks wide. I saw one of these in Luton and I bought one.'
+        }
     },
     {
         name: 'Emma',
         team: 'Henley',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/emma-1-e1603211658884.jpg',
         days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'I heard about this on jump-up radio, decided to give it a try. This product works certainly well. It accidentally improves my baseball by a lot.'
+        }
     },
     {
         name: 'Fiona',
         team: 'Henley',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20201110_124943136-2.jpg',
         days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'It works considerably well. It recklessly improves my basketball by a lot. I saw one of these in a shop and I bought one. I tried to kidnap it but got apricot all over it.'
+        }
     },
     {
         name: 'Fiona',
         team: 'Oxford',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20201110_124943136-2.jpg',
         days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],  
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Karly has one of these. She works as a gambler and she says it looks tall. talk about interest!!'
+        }
     },
     {
         name: 'Lauren',
         team: 'Oxford',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Photo_Lauren.png',
-        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Frona has one of these. She works as a carer and she says it looks bearded. I heard about this on songo radio, decided to give it a try.'
+        }
     },
     {
         name: 'Greta',
         team: 'Oxford',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Screenshot-2021-01-17-at-16.10.19.png',
-        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'My neighbor Betha has one of these. She works as a teacher and she says it looks wide. I saw one of these in Luton and I bought one.'
+        }
     },
     {
         name: 'Parveen',
         team: 'Oxford',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_20191119_001858_431.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'I heard about this on jump-up radio, decided to give it a try. This product works certainly well. It accidentally improves my baseball by a lot.'
+        }
     },
     {
         name: 'Caroline',
         team: 'Oxford',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Bellevie-ID.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'It works considerably well. It recklessly improves my basketball by a lot. I saw one of these in a shop and I bought one. I tried to kidnap it but got apricot all over it.'
+        }
     },
     {
         name: 'Caroline',
         team: 'Wantage',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Bellevie-ID.jpg',
         days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Karly has one of these. She works as a gambler and she says it looks tall. talk about interest!!'
+        }
     },
     {
         name: 'Billy',
         team: 'Wantage',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Billy-Picture-rotated.jpg',
-        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Frona has one of these. She works as a carer and she says it looks bearded. I heard about this on songo radio, decided to give it a try.'
+        }
     },
     {
         name: 'Amelia',
         team: 'Wantage',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/Untitled.jpg',
-        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'My neighbor Betha has one of these. She works as a teacher and she says it looks wide. I saw one of these in Luton and I bought one.'
+        }
     },
     {
         name: 'Alice',
         team: 'Wantage',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Alice.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'I heard about this on jump-up radio, decided to give it a try. This product works certainly well. It accidentally improves my baseball by a lot.'
+        }
     },
     {
         name: 'Peter',
         team: 'Wantage',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/P1150609-1.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'It works considerably well. It recklessly improves my basketball by a lot. I saw one of these in a shop and I bought one. I tried to kidnap it but got apricot all over it.'
+        }
     },
     {
         name: 'Peter',
         team: 'Witney',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/P1150609-1.jpg',
-        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Karly has one of these. She works as a gambler and she says it looks tall. talk about interest!!'
+        }
     },
     {
         name: 'Kelly',
         team: 'Witney',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/E693E814-AB89-47BC-AE1C-F0FA7A125B20.jpg',
-        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Frona has one of these. She works as a carer and she says it looks bearded. I heard about this on songo radio, decided to give it a try.'
+        }
     },
     {
         name: 'Julie',
         team: 'Witney',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/ID-image-JK.jpg',
-        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'My neighbor Betha has one of these. She works as a teacher and she says it looks wide. I saw one of these in Luton and I bought one.'
+        }
     },
     {
         name: 'Angie',
         team: 'Witney',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_0483-rotated.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'I heard about this on jump-up radio, decided to give it a try. This product works certainly well. It accidentally improves my baseball by a lot.'
+        }
     },
     {
         name: 'Karen',
         team: 'Witney',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_1180.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'It works considerably well. It recklessly improves my basketball by a lot. I saw one of these in a shop and I bought one. I tried to kidnap it but got apricot all over it.'
+        }
     },
     {
         name: 'Karen',
         team: 'Woodstock',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/02/IMG_1180.jpg',
         days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Karly has one of these. She works as a gambler and she says it looks tall. talk about interest!!'
+        }
     },
     {
         name: 'Imogen',
         team: 'Woodstock',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Imogen.jpeg',
-        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Frona has one of these. She works as a carer and she says it looks bearded. I heard about this on songo radio, decided to give it a try.'
+        }
     },
     {
         name: 'Vicki',
         team: 'Woodstock',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Vicki.jpg',
         days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'My neighbor Betha has one of these. She works as a teacher and she says it looks wide. I saw one of these in Luton and I bought one.'
+        }
     },
     {
         name: 'Tina',
         team: 'Woodstock',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tina.jpg',
         days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'I heard about this on jump-up radio, decided to give it a try. This product works certainly well. It accidentally improves my baseball by a lot.'
+        }
     },
     {
         name: 'Neil',
         team: 'County Durham',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2021/01/neil.jpg',
-        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Karly has one of these. She works as a gambler and she says it looks tall. talk about interest!!'
+        }
     },
     {
         name: 'Lisa',
         team: 'County Durham',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/image0-2.png',
-        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Frona has one of these. She works as a carer and she says it looks bearded. I heard about this on songo radio, decided to give it a try.'
+        }
     },
     {
         name: 'Glen',
         team: 'County Durham',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/BelleVie-photo-2-scaled.jpg',
-        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'My neighbor Betha has one of these. She works as a teacher and she says it looks wide. I saw one of these in Luton and I bought one.'
+        }
     },
     {
         name: 'Sara',
         team: 'County Durham',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Sara.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'I heard about this on jump-up radio, decided to give it a try. This product works certainly well. It accidentally improves my baseball by a lot.'
+        }
     },
     {
         name: 'Tesni',
         team: 'County Durham',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tesni.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'It works considerably well. It recklessly improves my basketball by a lot. I saw one of these in a shop and I bought one. I tried to kidnap it but got apricot all over it.'
+        }
     },
     {
         name: 'Tesni',
-        team: 'Newcastle upon Tyne',
+        team: 'Newcastle Upon Tyne',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/tesni.jpg',
-        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Karly has one of these. She works as a gambler and she says it looks tall. talk about interest!!'
+        }
     },
     {
         name: 'Camilla',
-        team: 'Newcastle upon Tyne',
+        team: 'Newcastle Upon Tyne',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Camilla.jpg',
-        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Frona has one of these. She works as a carer and she says it looks bearded. I heard about this on songo radio, decided to give it a try.'
+        }
     },
     {
         name: 'Grace',
-        team: 'Newcastle upon Tyne',
+        team: 'Newcastle Upon Tyne',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Grace.jpg',
-        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'My neighbor Betha has one of these. She works as a teacher and she says it looks wide. I saw one of these in Luton and I bought one.'
+        }
     },
     {
         name: 'Marc',
-        team: 'Newcastle upon Tyne',
+        team: 'Newcastle Upon Tyne',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Marc.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'I heard about this on jump-up radio, decided to give it a try. This product works certainly well. It accidentally improves my baseball by a lot.'
+        }
     },
     {
         name: 'Lora',
-        team: 'Newcastle upon Tyne',
+        team: 'Newcastle Upon Tyne',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Lora.png',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'It works considerably well. It recklessly improves my basketball by a lot. I saw one of these in a shop and I bought one. I tried to kidnap it but got apricot all over it.'
+        }
     },
     {
         name: 'Lora',
         team: 'Northumberland',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/Lora.png',
-        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'thursday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Karly has one of these. She works as a gambler and she says it looks tall. talk about interest!!'
+        }
     },
     {
         name: 'Karina',
         team: 'Northumberland',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/karina-scaled.jpg',
-        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday']
+        days: ['monday', 'tuesday', 'friday', 'saturday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'My neighbor Frona has one of these. She works as a carer and she says it looks bearded. I heard about this on songo radio, decided to give it a try.'
+        }
     },
     {
         name: 'Mauricio',
         team: 'Northumberland',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/mauricio-1-e1602339778439.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'sunday'],
+        review: {
+            rating: [1, 1, 1, 1],
+            review: 'My neighbor Betha has one of these. She works as a teacher and she says it looks wide. I saw one of these in Luton and I bought one.'
+        }
     },
     {
         name: 'Beth',
         team: 'Northumberland',
         img: 'https://www.belleviecare.co.uk/wp-content/uploads/2020/10/beth.jpg',
-        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+        days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+        review: {
+            rating: [1, 1, 1, 1, 1],
+            review: 'I heard about this on jump-up radio, decided to give it a try. This product works certainly well. It accidentally improves my baseball by a lot.'
+        }
     },
 ]

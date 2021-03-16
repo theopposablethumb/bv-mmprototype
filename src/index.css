@@ -98,7 +98,7 @@ ul.rating li {display: inline-block; width: 20px; height: 20px; margin: 0 0.5em 
 
 .flex {display: flex; flex-wrap: wrap;}
 .flex .image {width: 300px}
-.product {width: 70%; display: flex;}
+.product {width: 70%; display: flex; margin-bottom: 2em;}
 .product div {padding: 0 1em;}
 .product h2 {text-align: left; margin: 0 0 0.25em}
 
@@ -106,7 +106,7 @@ div.bvApproved {padding: 0;}
 .bvApproved img {box-shadow: none; float: left; margin-right: 0.5em;}
 .bvApproved p {font-size: 1.4em; font-weight: 500; color: #185D6F; padding: 0.8em;}
 
-div.cta {width: 50%; padding-bottom: 1em; box-sizing: border-box; border-radius: 8px; background: #e6f1f2;}
+div.cta {width: 65%; padding-bottom: 1em; box-sizing: border-box; border-radius: 8px; background: #e6f1f2;}
 .listing div.cta {width: 20%; background-color: #fff; padding: 1em; margin-top: 3em;}
 
 ul.carers {margin-top: 1.5em;}
@@ -115,10 +115,16 @@ ul.carers {margin-top: 1.5em;}
 .carers img {width: 150px; height: 150px;}
 
 ul.reviews {list-style: none; padding: 0;}
-.reviews li {display: flex; margin: 2em 0}
-.reviews .rating {margin-left: 1em; width: 200px}
+.reviews li {margin: 3em 0 0.5em 0}
+.reviews div {display: flex;}
+.reviews div div {display: block; margin-left: 1em;}
+.reviews .rating {margin-top: 1em}
 .reviews p {margin: 0;}
 .reviews span {font-style: italic;}
+
+.reviews figure {box-shadow: none; background: none}
+.reviews img {width: 75px; height: 75px; border-radius: 50%; border: 1px solid #333; }
+
 
 .cart {position: fixed; top: 0; left: 0; width: 100vw; background: #f5f5f5; padding-top: 0.75em; box-shadow:  5px 0px 8px rgba(0,0,0,0.5);}
 .cart div {margin-right: 15%;}

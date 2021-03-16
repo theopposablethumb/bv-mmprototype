@@ -54,32 +54,6 @@ class Questions extends React.Component {
             case 'security':
                 this.setState(state => ({list: security, complete: false}))
                 break;
-            case 'memory':
-            case 'medication':
-            case 'mobility':
-            case 'hearing':
-            case 'vision': 
-            case 'gardening':
-            case 'arts':
-            case 'puzzles':
-            case 'exercise':
-            case 'hobbies':
-            case 'pets':
-            case 'listening':
-            case 'chores':
-            case 'DIY':
-            case 'stairs':
-            case 'Cooking and meals':
-            case 'cooking':
-            case 'emergencies':
-            case 'alone':
-            case 'kitchen':
-            case 'bathroom':
-                this.setState(state => ({list: support, complete: 'support'}))
-                break;
-            case 'yes':
-                this.setState(state => ({list: week, complete: 'schedule', support: true}));
-                break;
             default:
                 this.setState(state => ({complete: true}))
                 break;

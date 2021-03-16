@@ -11,7 +11,7 @@ let Options = (props) => {
     } else {
         return (
             <>
-                <h2>{props.title} in {props.location}</h2>
+                <h2>What area would you like support with?</h2>
                 <div className="questions">
                     <ul>{props.nextLevel()}</ul>
                 </div>

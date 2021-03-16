@@ -30,8 +30,8 @@ class CarePackage extends React.Component {
         if (this.state.days.length > 0) {
             return (
                 <>
-                    <p>We estimate your care package will cost...</p>
-                    <p className="price">£{price} <span>per week</span></p>
+                    <p>Your tailored support package will take into account the number of visits you would like a week/day.</p>
+                    <p className="price"> Prices starting from £{price}</p>
                 </>
             )
         }
@@ -41,9 +41,16 @@ class CarePackage extends React.Component {
         return (
             <div className="care">
                 <div>
-                    <h2>Your care package</h2>
-                    <p>We can help you live your best life at home. We understand that each person is unique, call us to discuss a care package that is unique and tailored to you. </p>
+                    <h2>Support to Live Well at Home: Your All-Inclusive Package</h2>
+                    <p>We can support you or your loved one to live well at home in {this.props.location}. Our all-inclusive packages are tailored to your needs and aspirations.</p>
                     <p>Our fabulous Wellbeing Support Workers provide outstanding support with the practical aspects of living at home, while building a relationship with you. We believe that care should be person-centred. We take the time to get to know you, your interests and your aspirations.</p>
+                    <ul>
+                        <li>Practical support such as personal care or meal preparation.</li> 
+                        <li>Companionship and support to be included in the local community.</li> 
+                        <li>Help around the house such as cleaning, DIY and pet care.</li>
+                        <li>Additional services as and when needed such as a gardener or a hairdresser. </li>
+                        <li>Products to help maintain and improve your quality of life. </li>
+                    </ul>
                 </div>
                 <div className="config">
                     <SelectDays selectDays={this.selectDays} />
@@ -51,8 +58,10 @@ class CarePackage extends React.Component {
                 </div>
                 <div>
                     <h3>Book a free initial consultation</h3>
+                    <p>The first step is to book a free initial conversation with our Trusted Assessor who will find out more about you, your interests and how we can help. They will then build your bespoke package based on this information. </p>
                     {this.renderPrice()}
                     {this.renderDays()}
+                    
                     <p className="call"><a>Call Jill to discuss your tailored care package</a></p>
                 </div>
             </div>
