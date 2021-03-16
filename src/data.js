@@ -14,7 +14,13 @@ export const products = [
     {title: 'Bathroom aids', description: 'Pastry sweet carrot cake fruitcake cheesecake jelly-o gummi bears liquorice. Wafer sugar plum sweet sesame snaps cake soufflé. Powder bear claw pie jelly-o danish jelly beans sesame snaps soufflé liquorice.', price: '29.99', rating: 5, reviews: reviews, image: 'imgs/bathaids.jpg'}, 
     {title: 'Mini Juke Box', description: 'Pastry sweet carrot cake fruitcake cheesecake jelly-o gummi bears liquorice. Wafer sugar plum sweet sesame snaps cake soufflé. Powder bear claw pie jelly-o danish jelly beans sesame snaps soufflé liquorice.', price: '12.99', rating: 3, reviews: reviews, image: 'imgs/jukebox.jpg'}, 
     {title: 'Colouring books', description: 'Pastry sweet carrot cake fruitcake cheesecake jelly-o gummi bears liquorice. Wafer sugar plum sweet sesame snaps cake soufflé. Powder bear claw pie jelly-o danish jelly beans sesame snaps soufflé liquorice.', price: '6.99', rating: 4, reviews: reviews, image: 'imgs/coloringbook.jpg'}];
-export const services = [{}];
+
+export const services = [
+    {title: 'Financial and Legal Advice', name: 'advice', img: 'imgs/advice.jpg', description: 'Brownie oat cake cookie jelly beans croissant cotton candy gummies. Jelly liquorice liquorice. Candy canes gingerbread apple pie gummi bears caramels chocolate lollipop cotton candy icing. ' },
+    {title: 'Exercise and Fitness', name: 'exercise', img: 'imgs/exercise.jpg', description: 'Brownie oat cake cookie jelly beans croissant cotton candy gummies. Jelly liquorice liquorice. Candy canes gingerbread apple pie gummi bears caramels chocolate lollipop cotton candy icing. ' },
+    {title: 'Hairdressers and Barbers', name: 'hairdresser', img: 'imgs/hairdresser.jpg', description: 'Brownie oat cake cookie jelly beans croissant cotton candy gummies. Jelly liquorice liquorice. Candy canes gingerbread apple pie gummi bears caramels chocolate lollipop cotton candy icing. ' },
+    {title: 'Gardeners', name: 'gardeners', img: 'imgs/gardener.jpg', description: 'Brownie oat cake cookie jelly beans croissant cotton candy gummies. Jelly liquorice liquorice. Candy canes gingerbread apple pie gummi bears caramels chocolate lollipop cotton candy icing. ' }
+];
 
 export const initValues = [{title: 'Health and Wellbeing', name: 'health'}, {title: 'Leisure and Play', name: 'leisure'}, {title: 'Living at Home', name: 'home'}, {title: 'Security', name: 'security'}];
 
