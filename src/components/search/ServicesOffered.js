@@ -9,10 +9,6 @@ let ServicesOffered = () => {
                     <div className="image"><img src={option.img} alt={option.title} /></div>
                     <div>
                         <h4>{option.title}</h4>
-                        <p>{option.description}</p>
-                        <ul>
-                            {option.features.map(feature => {return <li>{feature}</li>})}
-                        </ul>
                     </div>
                 </div>
             )})}
