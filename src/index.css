@@ -47,7 +47,7 @@ ul.options li.active {background: #d3f2f1; border: 1px solid #9daeb0;}
 ul.options li:hover {background: #d3edf2;}
 
 .flex.services {justify-content: space-between; margin-top: 3em}
-.care div.service {width: 24%; background: #fff; border-radius: 4px; padding: 0 0 0 1em 0;}
+.care div.service {width: 24%; background: #fff; border-radius: 4px; padding: 0 0 1em 0;}
 .service h4 {margin-top: 1em; font-weight: 500;}
 .service ul {padding-left: 1.2em;}
 .flex .service .image {width: 100%; padding: 0}
