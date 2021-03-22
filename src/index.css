@@ -89,7 +89,7 @@ button.next:hover {background: #489982; border: 3px solid #489982;}
 .listing {background: #eee; border: 1px solid #999; border-radius: 4px; padding: 1em; margin: 3em;}
 .listing .image {width: 30%;}
 .listing .image img {width: 100%}
-.listing .col {width: 66%; margin-left: 2em;}
+.listing .col {width: 66%; padding-left: 2em; box-sizing: border-box;}
 .listing h2 {text-align: left; text-decoration: underline; font-size: 2em; color: #185D6F; margin: 0 0 0.25em;}
 .listing h2:hover {text-decoration: none; color: #489982;}
 .listing h2.notClickable {text-align: left; text-decoration: none; color: #185D6F; margin: 0 0 0.25em;}

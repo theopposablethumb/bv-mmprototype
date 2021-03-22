@@ -69,4 +69,4 @@ class Services extends React.Component {
     }
 }
 
-export default Services;
+export default Services; 
